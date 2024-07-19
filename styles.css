@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8em;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: white;
+    margin-bottom: 4px;
+    border-radius: 3px;
+}
+
+section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section#home {
+    background: url('https://source.unsplash.com/random/1600x900') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+section#home .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section#home h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section#home p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+section#home .cta {
+    background: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+section#home .cta:hover {
+    background: #c0392b;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2em;
+    color: #34495e;
+}
+
+section#services .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+section#services .service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section#services .service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+section#services .service-item h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    color: #e74c3c;
+}
+
+section#services .service-item p {
+    font-size: 1em;
+    color: #7f8c8d;
+}
+
+section#testimonials .testimonial {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+section#testimonials .testimonial span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+section#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#contact form label {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 5px;
+}
+
+section#contact form input,
+section#contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+section#contact form input:focus,
+section#contact form textarea:focus {
+    border-color: #e74c3c;
+    outline: none;
+}
+
+section#contact form button {
+    background: #e74c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+section#contact form button:hover {
+    background: #c0392b;
+}
+
+footer {
+    background: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    header nav {
+        display: none;
+    }
+
+    header .menu-toggle {
+        display: flex;
+    }
+
+    header .menu-toggle.active + nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
